@@ -30,10 +30,17 @@ describe Account do
     expect(account.balance).to eq 500
   end
 
-  it 'withdrawl is only available when account balance is greater than amount' do
+  it 'withdrawl is available when account balance is greater than amount' do
     account = Account.new
     account.deposit(500)
     expect(account.withdrawl(1000)).to eq "Account has insufficient funds"
+  end
+
+  it 'withdrawl is available when account balance is the same as amount' do
+    account = Account.new()
+    account.deposit(500)
+    account.withdrawl(500)
+    expect(account.balance).to eq 0
   end
 
 end
