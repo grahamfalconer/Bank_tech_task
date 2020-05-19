@@ -11,6 +11,7 @@ class Account
 
   def deposit(amount)
     transaction = Transaction.new(amount: amount)
+    transaction.type << 'Credit'
     @transactions << transaction
   end
 
