@@ -13,6 +13,8 @@ class Account
     transaction = Transaction.new(amount: amount)
     transaction.type << 'Credit'
     @transactions << transaction
+    @balance =+ amount
+  
   end
 
   def withdrawl(amount)
