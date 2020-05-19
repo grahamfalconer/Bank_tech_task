@@ -28,7 +28,6 @@ describe Transaction do
   it 'stores what the balance of the account was after the transaction' do
     account = Account.new
     account.deposit(1000)
-    expect(account.latest_transaction.post_transaction_balance).to eq '1000'
-
+    expect(account.latest_transaction.balance_after_transaction).to eq '1000'
   end
 end

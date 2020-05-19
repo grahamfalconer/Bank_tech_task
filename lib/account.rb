@@ -12,6 +12,7 @@ class Account
   def deposit(amount)
     transaction = Transaction.new(amount: amount)
     transaction.type << 'Credit'
+    transaction.balance_after_transaction << (@balance + amount).to_s
     @transactions << transaction
     @balance += amount
   
