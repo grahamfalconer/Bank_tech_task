@@ -9,4 +9,7 @@ class Account
     @transactions = []
   end
 
+  def deposit(amount)
+  end
+
 end
