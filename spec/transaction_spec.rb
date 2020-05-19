@@ -25,17 +25,4 @@ describe Transaction do
     expect(account.latest_transaction.type).to eq 'Debit'
   end
 
-  it 'If a user deposits, it adds amount to account balance' do
-    account = Account.new
-    account.deposit(1000)
-    expect(account.balance).to eq 1000
-  end
-
-  it 'If a user does a withdraw, it removes amount account balance' do
-    account = Account.new
-    account.deposit(1000)
-    account.withdrawl(500)
-    expect(account.balance).to eq 500
-  end
-
 end
