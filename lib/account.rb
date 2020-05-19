@@ -15,6 +15,10 @@ class Account
     @transactions << transaction
   end
 
+  def withdrawl(amount)
+
+  end
+
   def latest_transaction
     @transactions[-1]
   end
