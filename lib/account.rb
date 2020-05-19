@@ -18,7 +18,7 @@ class Account
   end
 
   def withdrawl(amount)
-    if amount < @balance
+    if amount <= @balance
         transaction = Transaction.new(amount: amount)
         transaction.type << 'Debit'
         @transactions << transaction
