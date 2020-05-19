@@ -10,9 +10,12 @@ class Account
   end
 
   def deposit(amount)
+    transaction = Transaction.new(amount: amount)
+    @transactions << transaction
   end
 
   def latest_transaction
+    @transactions[-1]
   end
 
 end
