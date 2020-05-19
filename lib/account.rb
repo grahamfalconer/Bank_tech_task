@@ -1,3 +1,5 @@
+require_relative 'transaction'
+
 class Account
 
   attr_reader :balance, :transactions
@@ -16,10 +18,14 @@ class Account
   end
 
   def withdrawl(amount)
-    transaction = Transaction.new(amount: amount)
-    transaction.type << 'Debit'
-    @transactions << transaction
-    @balance -= amount
+    if amount < @balance
+        transaction = Transaction.new(amount: amount)
+        transaction.type << 'Debit'
+        @transactions << transaction
+        @balance -= amount
+    else
+        return "Account has insufficient funds"
+    end
   end
 
   def latest_transaction
