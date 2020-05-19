@@ -8,7 +8,7 @@ describe Transaction do
   end
   it 'Has the time it was created' do
     transaction = Transaction.new(amount: 1000)
-    expect(transaction.time_created).to eq Time.now
+    expect(transaction.time_created).to eq Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
   end
 
 end
