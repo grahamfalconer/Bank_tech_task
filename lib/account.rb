@@ -2,10 +2,8 @@ class Account
 
   attr_reader :balance, :transactions
 
-  MINIMUM_BALANCE = 0
-
   def initialize
-    @balance = MINIMUM_BALANCE
+    @balance = 0
     @transactions = []
   end
 
@@ -13,7 +11,7 @@ class Account
     transaction = Transaction.new(amount: amount)
     transaction.type << 'Credit'
     @transactions << transaction
-    @balance =+ amount
+    @balance += amount
   
   end
 
@@ -21,6 +19,7 @@ class Account
     transaction = Transaction.new(amount: amount)
     transaction.type << 'Debit'
     @transactions << transaction
+    @balance -= amount
   end
 
   def latest_transaction

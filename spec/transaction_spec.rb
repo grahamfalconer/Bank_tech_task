@@ -8,7 +8,8 @@ describe Transaction do
   end
   it 'Has the time it was created' do
     transaction = Transaction.new(amount: 1000)
-    expect(transaction.date_created).to eq Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
+    current_date = Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
+    expect(transaction.date_created).to eq current_date
   end
 
   it 'knows if its type was Credit' do
@@ -24,10 +25,17 @@ describe Transaction do
     expect(account.latest_transaction.type).to eq 'Debit'
   end
 
-  it 'if transaction type is Credit, it adds amount to account balance' do
+  it 'If a user deposits, it adds amount to account balance' do
     account = Account.new
     account.deposit(1000)
     expect(account.balance).to eq 1000
+  end
+
+  it 'If a user does a withdraw, it removes amount account balance' do
+    account = Account.new
+    account.deposit(1000)
+    account.withdrawl(500)
+    expect(account.balance).to eq 500
   end
 
 end
