@@ -11,7 +11,7 @@ describe Account do
     expect(account.transactions).to eq []
   end
 
-  xit 'knows my latest transaction' do
+  it 'knows my latest transaction' do
     account = Account.new
     account.deposit(2000)
     expect(account.latest_transaction.amount).to eq 2000
