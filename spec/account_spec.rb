@@ -29,4 +29,11 @@ describe Account do
     account.withdrawl(500)
     expect(account.balance).to eq 500
   end
+
+  it 'If a user tries to withdrawl more then what it is available, an error is thown' do
+    account = Account.new
+    account.deposit(500)
+    expect(account.withdrawl(1000)).to eq "Account has insufficient funds"
+  end
+
 end
