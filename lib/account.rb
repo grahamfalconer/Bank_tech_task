@@ -12,4 +12,7 @@ class Account
   def deposit(amount)
   end
 
+  def latest_transaction
+  end
+
 end
