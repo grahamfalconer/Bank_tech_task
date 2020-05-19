@@ -16,7 +16,9 @@ class Account
   end
 
   def withdrawl(amount)
-
+    transaction = Transaction.new(amount: amount)
+    transaction.type << 'Debit'
+    @transactions << transaction
   end
 
   def latest_transaction
