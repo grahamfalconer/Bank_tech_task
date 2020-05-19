@@ -16,4 +16,5 @@ describe Account do
     account.deposit(2000)
     expect(account.latest_transaction.amount).to eq 2000
   end
+
 end
