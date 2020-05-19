@@ -11,7 +11,7 @@ describe Transaction do
     expect(transaction.date_created).to eq Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
   end
 
-  it 'knows if its type was credit or debit' do
+  it 'knows if its type was credit' do
     account = Account.new
     account.deposit(500)
     expect(account.latest_transaction.type).to eq 'Credit'
