@@ -24,4 +24,10 @@ describe Transaction do
     expect(account.latest_transaction.type).to eq 'Debit'
   end
 
+  it 'if transaction type is Credit, it adds amount to account balance' do
+    account = Account.new
+    account.deposit(1000)
+    expect(account.balance).to eq 1000
+  end
+
 end
