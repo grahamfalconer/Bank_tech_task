@@ -1,5 +1,6 @@
 
 require_relative 'transaction'
+require_relative 'statement'
 
 # My programme's main object for interraction
 class Account
@@ -33,4 +34,14 @@ class Account
   def latest_transaction
     @transactions[-1]
   end
+
+  def print_statement
+    statement = Statement.new
+    statement.prepare_statement(@transactions)
+  end
 end
+
+account = Account.new
+account.deposit(2000)
+account.withdrawl(500)
+account.print_statement
