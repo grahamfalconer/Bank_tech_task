@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 require_relative 'transaction'
 
+# My programme's main object for interraction
 class Account
-
   attr_reader :balance, :transactions
 
   def initialize
@@ -25,12 +27,11 @@ class Account
       @transactions << transaction
       @balance -= amount
     else
-      "Account has insufficient funds"
+      'Account has insufficient funds'
     end
   end
 
   def latest_transaction
     @transactions[-1]
   end
-
 end
