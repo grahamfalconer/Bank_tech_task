@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 
 # The basic template for an empty transaction
 class Transaction
