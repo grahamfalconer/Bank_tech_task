@@ -15,22 +15,8 @@ class Statement
   end
 
   def prepare_statement(transactions)
-    puts @column_descriptions
     transactions.each do |transaction|
-      puts format_transaction(transaction)
+    @full << format_transaction(transaction)
     end
   end
 end
-=begin
-  def print
-    @account.transactions.each do |transaction|
-        @full << format_transaction(transaction)
-    end
-    p @full
-  end
-
-end
-
-statement = Statement.new
-statement.print
-=end

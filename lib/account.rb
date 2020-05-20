@@ -38,10 +38,11 @@ class Account
   def print_statement
     statement = Statement.new
     statement.prepare_statement(@transactions)
+    statement.full.each { |transaction| return transaction + "\n" }
   end
 end
 
 account = Account.new
 account.deposit(2000)
 account.withdrawl(500)
-account.print_statement
+return account.print_statement
