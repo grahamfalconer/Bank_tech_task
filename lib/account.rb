@@ -15,18 +15,17 @@ class Account
     transaction.balance_after_transaction << (@balance + amount).to_s
     @transactions << transaction
     @balance += amount
-  
   end
 
   def withdrawl(amount)
     if amount <= @balance
-        transaction = Transaction.new(amount: amount)
-        transaction.type << 'Debit'
-        transaction.balance_after_transaction << (@balance - amount).to_s
-        @transactions << transaction
-        @balance -= amount
+      transaction = Transaction.new(amount: amount)
+      transaction.type << 'Debit'
+      transaction.balance_after_transaction << (@balance - amount).to_s
+      @transactions << transaction
+      @balance -= amount
     else
-        return "Account has insufficient funds"
+      "Account has insufficient funds"
     end
   end
 
