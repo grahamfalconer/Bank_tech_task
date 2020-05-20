@@ -43,4 +43,16 @@ describe Account do
     account.withdrawl(500)
     expect(account.balance).to eq 0
   end
+
+  it 'can print a full statement of all transactions' do
+    account = Account.new
+    account.deposit(2000)
+    account.withdrawl(500)
+    example_statement = "date || credit || debit || balance
+    2020-20-05 || 2000 || || 2000
+    2020-20-05 || || 500  || 1500"
+    p account.print_statement
+    p account.print_statement
+    expect(account.print_statement).to eq example_statement
+  end
 end
