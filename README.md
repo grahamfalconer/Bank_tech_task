@@ -23,3 +23,17 @@ date || credit || debit || balance
 13/01/2012 || 2000.00 || || 3000.00
 10/01/2012 || 1000.00 || || 1000.00
 
+## Coded with care by
+- [Graham Falconer](https://github.com/grahamfalconer)
+
+## Technologies
+
+| Purpose       | Technology     | 
+| ------------- |:-------------: | 
+| Language      | Ruby 2.5.0     | 
+| Test framework| Rspec          |
+| Codequality   | Rubocop        |
+| Codecoverage  | Simplecov      |
+
+## Running the project
+
