@@ -36,4 +36,14 @@ date || credit || debit || balance
 | Codecoverage  | Simplecov      |
 
 ## Running the project
+Clone the project
 
+Require the account file
+
+Make a new instance of account
+
+Create some transactions on the account
+
+Print statement
+
+![](READMEpictures/IRBexample.png)
