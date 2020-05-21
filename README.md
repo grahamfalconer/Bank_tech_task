@@ -38,12 +38,28 @@ date || credit || debit || balance
 ## Running the project
 Clone the project
 
-Require the account file
+```bash
+> bundle install
+> irb
+> require account
 
-Make a new instance of account
+make a new account
+> account.withdrawl(amount) or account.deposit(amount) to make some transactions
+>account.print_statement to see your statement
 
-Create some transactions on the account
-
-Print statement
+```
 
 ![](READMEpictures/IRBexample.png)
+
+
+
+## How to run tests  
+- rspec 
+  - run `rspec`
+- simplecov 
+  - connected to rspec
+- rubocop 
+  - run `rubocop`
+
+
+
