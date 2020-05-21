@@ -1,4 +1,3 @@
-
 require 'account'
 
 describe Account do
@@ -42,14 +41,5 @@ describe Account do
     account.deposit(500)
     account.withdrawl(500)
     expect(account.balance).to eq 0
-  end
-
-  it 'can print a full statement of all transactions' do
-    account = Account.new
-    account.deposit(2000)
-    account.withdrawl(500)
-    expect do
-      account.print_statement[0..3]
-    end.to output('date').to_stdout
   end
 end

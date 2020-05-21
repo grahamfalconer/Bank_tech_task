@@ -1,4 +1,3 @@
-
 # The basic template for an empty transaction
 class Transaction
   attr_reader :amount, :date_created, :type, :balance_after_transaction

@@ -1,3 +1,4 @@
+# The Statement class is in charge of formatting its transactions and preparing the statement
 class Statement
   attr_reader :column_descriptions, :full
 
@@ -8,15 +9,15 @@ class Statement
 
   def format_transaction(transaction)
     if transaction.type == 'Credit'
-        "#{transaction.date_created[0..9]} || #{transaction.amount} || || #{transaction.balance_after_transaction}"
+      "#{transaction.date_created[0..9]} || #{transaction.amount} || || #{transaction.balance_after_transaction}"
     else
-        "#{transaction.date_created[0..9]} || || #{transaction.amount}  || #{transaction.balance_after_transaction}"
+      "#{transaction.date_created[0..9]} || || #{transaction.amount}  || #{transaction.balance_after_transaction}"
     end
   end
 
   def prepare_statement(transactions)
     transactions.each do |transaction|
-    @full << format_transaction(transaction)
+      @full << format_transaction(transaction)
     end
   end
 end
