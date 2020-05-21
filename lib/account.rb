@@ -38,6 +38,7 @@ class Account
   def print_statement
     statement = Statement.new
     statement.prepare_statement(@transactions)
+    puts statement.full.join("\n")
   end
 
 end
