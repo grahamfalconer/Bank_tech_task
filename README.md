@@ -62,7 +62,7 @@ make a new account
 
 
 ## Planning and structure
-I first decided to break the classes I was going to need down from the requirements, I knew I wanted the bulk of my interaction to happen through the account for ease of user access. I first created the account, then moved on to create transactions once T.D.D required and later statements...
+I first decided to break the classes I was going to need down from the requirements, I knew I wanted the bulk of my interaction to happen through the account for ease of user access. I first created the account, then moved on to create transactions, and later statements...
 
 ![](READMEpictures/miro1.png)
 ![](READMEpictures/miro2.png)
