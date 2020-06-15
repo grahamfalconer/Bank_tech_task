@@ -1,6 +1,8 @@
 # Bank_tech_task
 Practicing my T.D.D processes on an example tech task and showcasing my understanding of O.O.D.
 
+---
+
 **Specification**
 
 Requirements
@@ -18,6 +20,7 @@ When she prints her bank statement
 Then she would see
 
 
+
 date || credit || debit || balance \
 14/01/2012 || || 500.00 || 2500.00 \
 13/01/2012 || 2000.00 || || 3000.00 \
@@ -25,6 +28,8 @@ date || credit || debit || balance \
 
 ## Coded with care by
 - [Graham Falconer](https://github.com/grahamfalconer)
+
+----
 
 ## Technologies
 
@@ -34,6 +39,8 @@ date || credit || debit || balance \
 | Test framework| Rspec          |
 | Codequality   | Rubocop        |
 | Codecoverage  | Simplecov      |
+
+---
 
 ## Running the project
 Clone the project
@@ -51,7 +58,8 @@ make a new account
 
 ![](READMEpictures/IRBexample.png)
 
-
+---
+  
 ## How to run tests  
 - rspec 
   - run `rspec`
@@ -59,7 +67,7 @@ make a new account
   - connected to rspec
 - rubocop 
   - run `rubocop`
-
+---
 
 ## Planning and structure
 I first decided to break the classes I was going to need down from the requirements, I knew I wanted the bulk of my interaction to happen through the account for ease of user access. I first created the account, then moved on to create transactions, and later statements...
